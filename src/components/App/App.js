@@ -7,9 +7,9 @@ import './App.css';
 export default class App extends React.Component {
     state = {
         taskItems: [
-            {id: 1, state: 'completed', description: 'Completed task', created: 'created 17 seconds ago'},
-            {id: 2, state: 'editing', description: 'Editing task', created: 'created 5 minutes ago'},
-            {id: 3, state: 'active', description: 'Active task', created: 'created 5 minutes ago'}
+            {id: 1, state: 'completed', description: 'Completed task', created: '1519211809934'},
+            {id: 2, state: 'editing', description: 'Editing task', created: '1519211810362'},
+            {id: 3, state: 'active', description: 'Active task', created: '1519211811670'}
         ],
         filter: 'all'
     }
@@ -17,7 +17,7 @@ export default class App extends React.Component {
         const id = this.state.taskItems.length + 1;
         const state = '';
         const description = taskValue;
-        const created = 'now';
+        const created = Date.now().toString();
         this.setState(({taskItems}) => ({
             taskItems: [...taskItems, {id, state, description, created}]
         }));
