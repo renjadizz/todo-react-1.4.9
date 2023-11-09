@@ -13,10 +13,12 @@ export default class NewTaskForm extends React.Component {
     }
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.onCreateTask(this.state.value);
-        this.setState({
-            value: ''
-        })
+        if (this.state.value !== "") {
+            this.props.onCreateTask(this.state.value);
+            this.setState({
+                value: ''
+            })
+        }
     }
 
     render() {
