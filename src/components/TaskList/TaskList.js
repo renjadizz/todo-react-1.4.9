@@ -38,7 +38,7 @@ TaskList.defaultProps = {
     },
 }
 TaskList.propTypes = {
-    taskItems: PropTypes.object.isRequired,
+    taskItems: PropTypes.arrayOf(PropTypes.object),
     onChangeTaskState: PropTypes.func,
     onDeleteTaskItem: PropTypes.func
 };

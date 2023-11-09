@@ -21,12 +21,8 @@ class Task extends React.Component {
     }
 }
 
-Task.defaultProps = {
-    description: "Do smthing"
-}
 Task.propTypes = {
-    created: PropTypes.number.isRequired,
-    description: PropTypes.string
+    itemText: PropTypes.object.isRequired,
 };
 
 export default Task;
