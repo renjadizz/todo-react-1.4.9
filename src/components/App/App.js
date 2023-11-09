@@ -15,7 +15,7 @@ export default class App extends React.Component {
     }
     onCreateTask = (taskValue) => {
         const id = this.state.taskItems.length + 1;
-        const state = '';
+        const state = 'active';
         const description = taskValue;
         const created = Date.now();
         this.setState(({taskItems}) => ({
